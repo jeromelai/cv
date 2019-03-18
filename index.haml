@@ -1,0 +1,37 @@
+- web_raw = 'lmen.us'
+- web = 'https://www.' + web_raw
+- twitter_raw = 'lmenus'
+- twitter = 'https://www.twitter.com/lmenus'
+- email = 'lmenus@' + web_raw
+- tel = '+44 7542 20 33 83'
+
+.card-wrapper
+    .card{:data => {:toggle_class => "flipped"}}
+        .card-front
+            .layer
+                %h1 Lubos
+                .corner
+                .corner
+                .corner
+                .corner
+        .card-back
+            .layer
+                .top
+                    %h2 Chief Idea Officer
+                    
+                .bottom
+                    %h3
+                        Phone:
+                        %a{:href => "tel:#{tel}"} #{tel}
+                    
+                    %h3
+                        Email:
+                        %a{:href => "mailto:#{email}"} #{email}
+                        
+                    %h3
+                        Twitter:
+                        %a{:href => "#{twitter}", :target => "_blank"} #{twitter_raw}
+                    
+                    %h3
+                        Web:
+                        %a{:href => "#{web}", :target => "_blank"} #{web_raw}
